@@ -27,7 +27,7 @@ class StoreMemberRequest extends FormRequest
             'nim' => 'required|string|max:15',
             'email' => 'required|email|max:100',
             'nomor_telepon' => 'required|string|max:15',
-            'alamat' => 'required|string|max:200',
+            'alamat' => 'nullable|string|max:200',
             'status' => 'required|string'
         ];
     }
@@ -40,7 +40,6 @@ class StoreMemberRequest extends FormRequest
             'email.required' => 'Email wajib diisi.',
             'email.email' => 'Email tidak valid.',
             'nomor_telepon.required' => 'Nomor telepon wajib diisi.',
-            'alamat.required' => 'Alamat wajib diisi.',
             'status.required' => 'Status wajib diisi.',
         ];
     }

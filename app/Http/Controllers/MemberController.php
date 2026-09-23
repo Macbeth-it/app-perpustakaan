@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class MemberController extends Controller
 {
     private array $members = [
-        ['id' => 1, 'nama' => 'Macbeth', 'nim' => '12130001', 'email' => 'macbeth@pens.com', 'nomor_telepon' => '08211111111', 'alamat' => 'Jl. Raya ITS, Surabaya', 'status' => 'Aktif'],
-        ['id' => 2, 'nama' => 'Wolfgang', 'nim' => '12130002', 'email' => 'wolfgang@pens.com', 'nomor_telepon' => '08222222222', 'alamat' => 'Jl. Veteran, Surabaya', 'status' => 'Non-aktif']
+        ['id' => 1, 'nama' => 'Siti Aminah', 'nim' => '2310501001', 'email' => 'siti.aminah@pens.ac.id', 'nomor_telepon' => '081234567890', 'status' => 'aktif'],
+        ['id' => 2, 'nama' => 'Budi Santoso', 'nim' => '2310501002', 'email' => 'budi.santoso@pens.ac.id', 'nomor_telepon' => '081298765432', 'status' => 'aktif'],
+        ['id' => 3, 'nama' => 'Dewi Lestari', 'nim' => '2310501003', 'email' => 'dewi.lestari@pens.ac.id', 'nomor_telepon' => '081211122233', 'status' => 'nonaktif'],
     ];
 
     /**
