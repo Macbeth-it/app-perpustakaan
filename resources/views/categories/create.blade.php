@@ -3,23 +3,37 @@
 @section('title', 'Tambah Kategori')
 
 @section('content')
-    <a href="{{ route('categories.index') }}">← Kembali ke daftar</a>
+    <div class="form-page">
+        <div class="form-heading">
+            <h1>Tambah Kategori</h1>
+            <p>Buat kategori untuk mengelompokkan koleksi buku.</p>
+        </div>
 
-    <form action="{{ route('categories.store') }}" method="POST">
-        @csrf
+        <form class="form-card" action="{{ route('categories.store') }}" method="POST">
+            @csrf
 
-        <label for="nama_kategori">Nama Kategori</label>
-        <input type="text" name="nama_kategori" id="nama_kategori" value="{{ old('nama_kategori') }}">
-        @error('nama_kategori')
-            <div class="error">{{ $message }}</div>
-        @enderror
+            <div class="form-grid">
+                <div class="form-field form-field-full">
+                    <label for="nama_kategori">Nama Kategori</label>
+                    <input class="form-control" type="text" name="nama_kategori" id="nama_kategori" value="{{ old('nama_kategori') }}">
+                    @error('nama_kategori')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
+                </div>
 
-        <label for="deskripsi">Deskripsi (opsional)</label>
-        <textarea name="deskripsi" id="deskripsi" rows="4">{{ old('deskripsi') }}</textarea>
-        @error('deskripsi')
-            <div class="error">{{ $message }}</div>
-        @enderror
+                <div class="form-field form-field-full">
+                    <label for="deskripsi">Deskripsi <span class="form-help">(opsional)</span></label>
+                    <textarea class="form-control" name="deskripsi" id="deskripsi" rows="4">{{ old('deskripsi') }}</textarea>
+                    @error('deskripsi')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
 
-        <button type="submit" class="btn">Simpan</button>
-    </form>
+            <div class="form-actions">
+                <button type="submit" class="btn">Simpan Kategori</button>
+                <a href="{{ route('categories.index') }}" class="btn-secondary">Batal</a>
+            </div>
+        </form>
+    </div>
 @endsection
